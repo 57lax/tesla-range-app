@@ -1,0 +1,30 @@
+.List {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+li {
+    height: 100px;
+}
+
+.Speed {
+    width: 180px;
+    margin-right: 50px;
+}
+
+.Temperature {
+    width: 350px;
+    padding: 0px 40px;
+    margin-right: 40px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.Wheels {
+    width: 35%;
+}

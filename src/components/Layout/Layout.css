@@ -1,6 +1,4 @@
 .Header {
-    background-color: black;
-    height: 50px;
-    color: white;
-    margin:20px
+    background-color: #222;
+    text-align: center;
 }

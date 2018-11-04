@@ -1,0 +1,53 @@
+.Container {
+    margin-left: 40px;
+    width:  100px;
+    height: 100px;
+    text-align: center;
+    
+}
+
+.TempButton {
+    width:  88px;
+    height: 88px;
+    border: 6px solid #f7f7f7;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+
+.TempButton > p{
+    margin: 14px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.Icon {
+    width: 22px;
+    height: 22px;
+    margin-top: 8px;
+}
+
+.On {
+    color: #fff;
+}
+
+.Off {
+    color: #666;
+    background: none !important;
+}
+
+.Off path {
+    fill: #CCCCCC
+}
+
+.Heat{
+    background: linear-gradient(to bottom, #d64800 0%, #d20200 100%);
+}
+
+.AC{
+    background: linear-gradient(to bottom, #33a0ff 0%, #388bff 100%);
+}

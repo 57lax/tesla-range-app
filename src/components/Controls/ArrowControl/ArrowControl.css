@@ -1,0 +1,83 @@
+.ArrowControl {
+    width: 158px;
+    height: 65px;
+    margin-top: 10px; 
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    position: relative;
+}
+
+.ArrowControlContent {
+    position: absolute;
+    padding: 18px 0px 0px 30px;
+    width: 80%;
+    margin: 0 8px 0 0;
+}
+
+.ArrowControlContent > p{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+}
+.ArrowControlContent > p > span {
+    position: absolute;
+    top: -3px;
+    left: 35px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.Label {
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Arrows {
+    position: absolute; 
+    right: 15px;
+    height: 100%;
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Arrows > div {
+    width: 20px;
+    fill: black !important;
+}
+
+.ArrowUp {
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 18px;
+}
+
+.ArrowDown {
+    border-top: 1px solid #ccc;
+    width: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 7px;
+}
+
+.Inactive {
+    cursor: not-allowed;
+}
+
+.Inactive > path {
+    opacity: 0.4;
+}
+
+.Active {
+    cursor: pointer;
+}

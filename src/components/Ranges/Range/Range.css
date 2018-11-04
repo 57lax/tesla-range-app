@@ -1,0 +1,30 @@
+.ModelContainer {
+    width: 130px;
+    height: 12px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.Model {
+    position: absolute;
+    height: 100%;
+    right: 0px;
+}
+
+.Range {
+    font-size: 40px;
+    font-weight: normal;
+    padding: 0 18px 0 0;
+    position: relative;
+    color: #008dff;
+    text-align: right;
+}
+
+.Range::after {
+    font-size: 14px;
+    font-weight: normal;
+    content: 'MI';
+    position: absolute;
+    top: 8px;
+    right: 0;
+}

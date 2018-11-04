@@ -1,0 +1,22 @@
+.Wrapper {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1050px;
+
+}
+
+.Title {
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 37px;
+    text-align: center;
+}
+
+.BottomNotice {
+    margin: 20px 0;
+    font-size: 15px;
+    color: #666;
+    line-height: 20px;
+}

@@ -1,16 +1,14 @@
 import React from 'react';
 
 import classes from './Layout.css';
+import Logo from '../Logo/Logo';
 
 const layout = (props) => (
     <React.Fragment>
-        <header className={classes.Header}>Tesla logo</header>
+        <div className={classes.Header}><Logo/></div>
         <main>
             {props.children}
         </main>
-        <footer>
-                Some text
-        </footer>
     </React.Fragment>
 );
 
