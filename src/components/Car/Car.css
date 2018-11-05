@@ -26,15 +26,24 @@
 }
 
 .SlowSpeed {
-    -webkit-animation: spin 1s infinite linear;
+    -webkit-animation: spin 1s infinite linear; 
+    -moz-animation:    spin 1s infinite linear; 
+    -o-animation:      spin 1s infinite linear; 
+    animation:         spin 1s infinite linear; 
 }
 
 .MediumSpeed {
-    -webkit-animation: spin 0.5s infinite linear;
+    -webkit-animation: spin 0.5s infinite linear; 
+    -moz-animation:    spin 0.5s infinite linear; 
+    -o-animation:      spin 0.5s infinite linear; 
+    animation:         spin 0.5s infinite linear; 
 }
 
 .HighSpeed {
-    -webkit-animation: spin 0.2s infinite linear;
+    -webkit-animation: spin 0.2s infinite linear; 
+    -moz-animation:    spin 0.2s infinite linear; 
+    -o-animation:      spin 0.2s infinite linear; 
+    animation:         spin 0.2s infinite linear; 
 }
 
 .Right {
@@ -44,7 +53,20 @@
 .Left {
 }
 
+
 @-webkit-keyframes spin {
     0%  {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(-360deg);}   
+    100% {-webkit-transform: rotate(-360deg);}  
+}
+@-moz-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-360deg);}  
+}
+@-o-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-360deg);}  
+}
+@keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-360deg);}  
 }
