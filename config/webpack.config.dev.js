@@ -295,15 +295,22 @@ module.exports = {
               modules: true,
             }),
           },
-          // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
-          // using the extension .module.css
           {
-            test: cssModuleRegex,
-            use: getStyleLoaders({
-              importLoaders: 1,
-              modules: true,
-              getLocalIdent: getCSSModuleLocalIdent,
-            }),
+            // excluding for node-modules
+            test: /.css$/,
+            exclude: path.resolve('./node_modules'),
+            use: ['style-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                    modules: true,
+                    minimize: true,
+                    camelCase: true,
+                    importLoaders: 1,
+                    localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                    },
+                }
+            ],
           },
           // Opt-in support for SASS (using .scss or .sass extensions).
           // Chains the sass-loader with the css-loader and the style-loader

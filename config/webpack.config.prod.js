@@ -282,6 +282,20 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+          {
+            test: /\.svg$/,
+            use: [
+              {
+                loader: "babel-loader"
+              },
+              {
+                loader: "react-svg-loader",
+                options: {
+                  jsx: true // true outputs JSX tags
+                }
+              }
+            ]
+          },
           // Process application JS with Babel.
           // The preset includes JSX, Flow, TypeScript and some ESnext features.
           {
@@ -345,6 +359,23 @@ module.exports = {
           // files. If you use code splitting, async bundles will have their own separate CSS chunk file.
           // By default we support CSS Modules with the extension .module.css
           {
+            // excluding for node-modules
+            test: /.css$/,
+            exclude: path.resolve('./node_modules'),
+            use: ['style-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                    modules: true,
+                    minimize: true,
+                    camelCase: true,
+                    importLoaders: 1,
+                    localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                    },
+                }
+            ],
+          },
+          {
             test: cssRegex,
             exclude: cssModuleRegex,
             loader: getStyleLoaders({
@@ -359,15 +390,7 @@ module.exports = {
           },
           // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
           // using the extension .module.css
-          {
-            test: cssModuleRegex,
-            loader: getStyleLoaders({
-              importLoaders: 1,
-              sourceMap: shouldUseSourceMap,
-              modules: true,
-              getLocalIdent: getCSSModuleLocalIdent,
-            }),
-          },
+          
           // Opt-in support for SASS. The logic here is somewhat similar
           // as in the CSS routine, except that "sass-loader" runs first
           // to compile SASS files into CSS.
